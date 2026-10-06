@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 20
       - run: unzip -q MEGHRAJ_final.zip -d site
-      - run: npm install && npx vite build
+      - run:       - run: rm -f package-lock.json && npm install --no-audit --no-fund && npx vite build
         working-directory: site
       - uses: actions/upload-pages-artifact@v3
         with:
